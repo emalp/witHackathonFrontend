@@ -5,6 +5,8 @@ import {checkboxes} from './CharacterObj';
 import Checkbox from './CheckBox';
 import Result from './Result';
 
+import cover_image from "./different1.jpg";
+
 import {searchAPI} from './serviceFunctions';
 
 class Dender extends React.Component {
@@ -112,7 +114,7 @@ class Dender extends React.Component {
         return (
             <div>
 
-            <img src="../public/different1.jpg"/><br/>
+            <img src={cover_image}/><br/>
 
                 <SearchField 
                     placeholder='Enter search term'
