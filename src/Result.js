@@ -10,13 +10,18 @@ class Result extends React.Component {
 
     render(){
         return (
-            <div>
-                {this.data.name}  {this.data.reviews}
-                <br/>
-                {this.data.price} {this.data.address}
-                {/* will be image here */}
-                <br/>
-
+            <div class="col">
+                <div class="card">
+                <div class="card-header">
+                    { this.data.name }
+                </div>
+                    <div class="card-body">
+                        <div class="card-img-top" src={this.data.image}></div>
+                        <div class="card-text">
+                            <p class="text-muted">{this.data.address}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
 

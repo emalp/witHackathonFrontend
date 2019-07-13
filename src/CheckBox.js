@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 const Checkbox = ({ type = 'checkbox', name, onChange, label }) => (
   <div>
     <label>
-      {label}
+      {label} &nbsp;
       <input type={type} name={name} onChange={onChange} />
     </label>
-    <br/>
+    &nbsp;
   </div>
 );
 

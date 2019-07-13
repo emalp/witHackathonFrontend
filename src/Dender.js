@@ -118,29 +118,56 @@ class Dender extends React.Component {
 
         return (
             <div>
-
-            <div className="main_image">
-                <img src={cover_image}/><br/>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
+crossorigin="anonymous"></link>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">SelectAblilty</a>
             </div>
+            </nav>
+            <header class="bg-primary text-white">
+                <div class="container text-center">
+                    <br></br>
+                <h1>Welcome to SelectAblilty</h1>
+                <p class="lead">.......Text to add..........</p>
+                <br></br><br></br>
+                </div>
+            </header>
 
-                <SearchField 
-                    placeholder='Enter search term'
-                    onChange={this.middleWare}
-                    onEnter={this.middleWare}
-                    onSearchClick={this.middleWare}
-                />
-
-                <br/>
-                <br/>
-
-                {
-                        checkboxes.map(item => (
-                            <Checkbox name={item.name} onChange={this.tickAndSearch} label={item.label}/>
-                        ))
-                }
-
-                <br/>
-                <br/>
+            <br></br>
+            <div class="col">
+                <div class="card">
+                <div class="card-header">
+                    Search
+                </div>
+                    <div class="card-body">
+                        <div class="card-text">
+                        <div class="input-group mb-3"> 
+                            <SearchField 
+                                placeholder='Enter search term'
+                                onChange={this.middleWare}
+                                onEnter={this.middleWare}
+                                onSearchClick={this.middleWare}
+                                style={{width: '300px'}}  
+                            />
+                        </div>
+                                <div class="input-group mb-3"> 
+                                {
+                                        checkboxes.map(item => (
+                                            <div>
+                                            <Checkbox name={item.name} onChange={this.tickAndSearch} label={item.label}/>
+                                            </div>
+                                        ))
+                                }
+                                
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <br/>
 
                 {
                          this.state.result.map(item => (
