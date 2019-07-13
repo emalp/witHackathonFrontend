@@ -19,6 +19,26 @@ export const checkboxes = [
       key: 'Epilepsy',
       label: 'Epilepsy',
     },
+    {
+        name: '5',
+        key: 'Open during night hours',
+        label: 'Open during night hours'
+    },
+    {
+        name: '6',
+        key: "Some allergies",
+        label: "Some allergies"
+    },
+    {
+        name: "7",
+        key: "Some Intolerances",
+        label: 'Some Intolerances'
+    },
+    {
+        name: '8',
+        key: 'Celiac',
+        label: 'Celiac'
+    }
   ];
   
 export default checkboxes;

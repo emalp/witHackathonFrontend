@@ -22,7 +22,12 @@ class Dender extends React.Component {
                     1: false,
                     2: false,
                     3: false,
-                    4: false
+                    4: false,
+                    5: false,
+                    6: false,
+                    7: false,
+                    8: false
+
                 }
             },
         }
@@ -114,7 +119,9 @@ class Dender extends React.Component {
         return (
             <div>
 
-            <img src={cover_image}/><br/>
+            <div className="main_image">
+                <img src={cover_image}/><br/>
+            </div>
 
                 <SearchField 
                     placeholder='Enter search term'
