@@ -22,6 +22,7 @@ class Result extends React.Component {
                         </div>
                     </div>
                 </div>
+                <br></br>
             </div>
         )
 

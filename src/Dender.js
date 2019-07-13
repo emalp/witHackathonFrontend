@@ -136,7 +136,7 @@ crossorigin="anonymous"></link>
                 <div class="container text-center">
                     <br></br>
                 <h1>Welcome to SelectAblilty</h1>
-                <p class="lead">.......Text to add..........</p>
+                <p class="lead">Find buinesses that cater to your abilities</p>
                 <br></br><br></br>
                 </div>
             </header>
