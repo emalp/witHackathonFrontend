@@ -131,7 +131,6 @@ crossorigin="anonymous"></link>
             <div class="container">
                 <a class="navbar-brand" href="#">SelectAblilty</a>
             </div>
-<<<<<<< HEAD
             </nav>
             <header class="bg-primary text-white">
                 <div class="container text-center">
@@ -156,7 +155,6 @@ crossorigin="anonymous"></link>
                                 onChange={this.middleWare}
                                 onEnter={this.middleWare}
                                 onSearchClick={this.middleWare}
-                                style={{width: '300px'}}  
                             />
                         </div>
                                 <div class="input-group mb-3"> 
@@ -175,27 +173,6 @@ crossorigin="anonymous"></link>
             </div>
             <br/>
             <br/>
-=======
-
-                <SearchField 
-                    placeholder='Enter search term'
-                    onChange={this.changeAndSearch}
-                    onEnter={this.middleWare}
-                    onSearchClick={this.middleWare}
-                />
-
-                <br/>
-                <br/>
-
-                {
-                        checkboxes.map(item => (
-                            <Checkbox name={item.name} onChange={this.tickAndSearch} label={item.label}/>
-                        ))
-                }
-
-                <br/>
-                <br/>
->>>>>>> 0a6588c34dd61f84a605d00df1c5e3b0e34b632e
 
                 {
                          this.state.result.map(item => (
