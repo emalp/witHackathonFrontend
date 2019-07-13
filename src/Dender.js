@@ -41,15 +41,14 @@ class Dender extends React.Component {
     }
 
     async changeAndSearch(search_term){
-        console.log("change and search");
-        console.log(search_term);
 
         try {
+            
             await this.setState({
                 query: search_term
             });
     
-            await this.search();
+            //await this.search();
 
         } catch (err) {
             console.log("Error: "+ err);
@@ -72,12 +71,13 @@ class Dender extends React.Component {
         });
 
 
-        try{
-            await this.search();
+        await this.changeAndSearch();
+        // try{
+        //     await this.search();
 
-        } catch(err) {
-            console.log(err);
-        }
+        // } catch(err) {
+        //     console.log(err);
+        // }
     }
 
     async search(){
@@ -85,7 +85,7 @@ class Dender extends React.Component {
 
         for(let property in this.state.params.characters){
             if(this.state.params.characters[property] == true){
-                search_char.push(property);
+                search_char.push(Number(property));
             }
         }
 
@@ -94,11 +94,14 @@ class Dender extends React.Component {
             characters: search_char
         }
 
+        console.log("Inside search, calling searchAPI");
+        console.log(this.state.params.query);
+
         try{
             let result = await searchAPI(final_search_query);
             
             await this.setState({
-                result: result
+                result: result.data
             });
 
 
@@ -109,8 +112,11 @@ class Dender extends React.Component {
     }
 
     middleWare(text){
+        
+        this.search(text);
 
-        this.changeAndSearch(text);
+        //sleep
+        //return new Promise(resolve => setTimeout(resolve, 2000));
         
     }
 
@@ -125,6 +131,7 @@ crossorigin="anonymous"></link>
             <div class="container">
                 <a class="navbar-brand" href="#">SelectAblilty</a>
             </div>
+<<<<<<< HEAD
             </nav>
             <header class="bg-primary text-white">
                 <div class="container text-center">
@@ -168,6 +175,27 @@ crossorigin="anonymous"></link>
             </div>
             <br/>
             <br/>
+=======
+
+                <SearchField 
+                    placeholder='Enter search term'
+                    onChange={this.changeAndSearch}
+                    onEnter={this.middleWare}
+                    onSearchClick={this.middleWare}
+                />
+
+                <br/>
+                <br/>
+
+                {
+                        checkboxes.map(item => (
+                            <Checkbox name={item.name} onChange={this.tickAndSearch} label={item.label}/>
+                        ))
+                }
+
+                <br/>
+                <br/>
+>>>>>>> 0a6588c34dd61f84a605d00df1c5e3b0e34b632e
 
                 {
                          this.state.result.map(item => (
